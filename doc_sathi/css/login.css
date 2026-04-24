@@ -1,0 +1,155 @@
+body.auth-page.login-page {
+    background:
+        linear-gradient(135deg, rgba(7, 18, 34, 0.92), rgba(15, 72, 93, 0.86)),
+        radial-gradient(circle at top left, rgba(126, 231, 217, 0.18), transparent 34%),
+        #0f172a;
+}
+
+.login-shell {
+    grid-template-columns: minmax(320px, 1.05fr) minmax(380px, 0.9fr);
+    gap: 36px;
+}
+
+.login-brand-panel {
+    position: relative;
+    min-height: 640px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    overflow: hidden;
+    background:
+        linear-gradient(180deg, rgba(10, 19, 37, 0.18), rgba(10, 19, 37, 0.86)),
+        linear-gradient(120deg, rgba(15, 143, 131, 0.2), transparent 52%),
+        url('../img/doctorspic.jpg') center/cover no-repeat;
+    box-shadow: 0 26px 58px rgba(6, 14, 30, 0.26);
+}
+
+.login-logo {
+    margin-bottom: 22px;
+}
+
+.login-brand-panel .brand-copy {
+    max-width: 460px;
+}
+
+.login-role-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.login-role-pills span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
+    padding: 0 14px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 999px;
+    background: rgba(9, 24, 45, 0.34);
+    color: #ffffff;
+    font-size: 0.84rem;
+    font-weight: 700;
+    backdrop-filter: blur(12px);
+}
+
+.login-highlights {
+    display: grid;
+    gap: 12px;
+    margin-top: 26px;
+    max-width: 460px;
+}
+
+.login-highlight {
+    padding: 16px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    background: rgba(9, 24, 45, 0.34);
+    backdrop-filter: blur(14px);
+}
+
+.login-highlight strong {
+    display: block;
+    color: #ffffff;
+    font-size: 0.98rem;
+    line-height: 1.35;
+}
+
+.login-highlight span {
+    display: block;
+    margin-top: 6px;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.92rem;
+    line-height: 1.55;
+}
+
+.login-card {
+    max-width: 520px;
+}
+
+.login-form-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+.login-card .field input {
+    min-height: 54px;
+    padding: 14px 16px;
+    background: #ffffff;
+}
+
+.login-divider {
+    position: relative;
+    margin: 24px 0 0;
+    color: var(--auth-muted);
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.login-divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-top: 1px solid var(--auth-border);
+}
+
+.login-divider span {
+    position: relative;
+    display: inline-block;
+    padding: 0 12px;
+    background: var(--auth-card);
+}
+
+@media (max-width: 880px) {
+    .login-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .login-brand-panel {
+        min-height: 0;
+        padding-top: 180px;
+    }
+
+    .login-highlights {
+        max-width: none;
+    }
+}
+
+@media (max-width: 620px) {
+    .login-brand-panel {
+        padding-top: 140px;
+    }
+
+    .login-role-pills {
+        justify-content: center;
+    }
+
+    .login-highlights {
+        margin-top: 20px;
+    }
+}

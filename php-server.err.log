@@ -1,0 +1,13 @@
+[Wed Apr 22 03:10:24 2026] PHP 8.2.12 Development Server (http://127.0.0.1:8000) started
+[Wed Apr 22 03:10:37 2026] 127.0.0.1:51524 Accepted
+[Wed Apr 22 03:10:37 2026] 127.0.0.1:51524 [200]: GET /
+[Wed Apr 22 03:10:37 2026] 127.0.0.1:51524 Closing
+[Wed Apr 22 03:10:50 2026] 127.0.0.1:56261 Accepted
+[Wed Apr 22 03:10:50 2026] 127.0.0.1:56261 [302]: GET /admin/doctor-verifications.php
+[Wed Apr 22 03:10:50 2026] 127.0.0.1:56261 Closing
+[Wed Apr 22 03:11:05 2026] 127.0.0.1:54922 Accepted
+[Wed Apr 22 03:11:05 2026] 127.0.0.1:54922 [200]: GET /
+[Wed Apr 22 03:11:05 2026] 127.0.0.1:54922 Closing
+[Wed Apr 22 03:34:42 2026] 127.0.0.1:56111 Accepted
+[Wed Apr 22 03:34:42 2026] 127.0.0.1:56111 [200]: GET /
+[Wed Apr 22 03:34:42 2026] 127.0.0.1:56111 Closing

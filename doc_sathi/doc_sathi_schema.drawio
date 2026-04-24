@@ -1,0 +1,91 @@
+<mxfile host="app.diagrams.net" modified="2026-04-23T00:00:00.000Z" agent="Codex" version="24.7.17">
+  <diagram id="docsathi-schema" name="Doc Sathi Schema">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Doc Sathi Database Schema" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="20" width="520" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="specialties" value="specialties" style="swimlane;html=1;rounded=0;horizontal=1;startSize=40;fillColor=#ffffff;strokeColor=#000000;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="specialties_attrs" value="PK id&#xa;sname" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=14;fontStyle=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="specialties">
+          <mxGeometry x="0" y="40" width="260" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="doctor" value="doctor" style="swimlane;html=1;rounded=0;horizontal=1;startSize=40;fillColor=#ffffff;strokeColor=#000000;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="360" y="100" width="340" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="doctor_attrs" value="PK docid&#xa;UQ docemail&#xa;docname&#xa;docpassword&#xa;UQ doctel&#xa;docaddress&#xa;docdob&#xa;gender&#xa;FK specialties -&gt; specialties.id&#xa;UQ license_number&#xa;clinic_name&#xa;qualification&#xa;experience_years&#xa;website&#xa;profile_photo&#xa;bio&#xa;verification_status&#xa;verification_submitted_at&#xa;verification_reviewed_at&#xa;verification_document&#xa;certification_file&#xa;FK verified_by -&gt; admin.aid&#xa;verified_at&#xa;admin_remarks&#xa;rejection_reason&#xa;created_at" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=14;fontStyle=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="doctor">
+          <mxGeometry x="0" y="40" width="340" height="460" as="geometry" />
+        </mxCell>
+
+        <mxCell id="admin" value="admin" style="swimlane;html=1;rounded=0;horizontal=1;startSize=40;fillColor=#ffffff;strokeColor=#000000;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="760" y="100" width="240" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_attrs" value="PK aid&#xa;UQ aemail&#xa;apassword" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=14;fontStyle=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="admin">
+          <mxGeometry x="0" y="40" width="240" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="webuser" value="webuser" style="swimlane;html=1;rounded=0;horizontal=1;startSize=40;fillColor=#ffffff;strokeColor=#000000;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="100" width="220" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="webuser_attrs" value="PK email&#xa;usertype" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=14;fontStyle=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="webuser">
+          <mxGeometry x="0" y="40" width="220" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="patient" value="patient" style="swimlane;html=1;rounded=0;horizontal=1;startSize=40;fillColor=#ffffff;strokeColor=#000000;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="680" width="260" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="patient_attrs" value="PK pid&#xa;UQ pemail&#xa;pname&#xa;ppassword&#xa;paddress&#xa;pdob&#xa;gender&#xa;UQ pnum" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=14;fontStyle=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="patient">
+          <mxGeometry x="0" y="40" width="260" height="150" as="geometry" />
+        </mxCell>
+
+        <mxCell id="schedule" value="schedule" style="swimlane;html=1;rounded=0;horizontal=1;startSize=40;fillColor=#ffffff;strokeColor=#000000;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="360" y="680" width="300" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="schedule_attrs" value="PK scheduleid&#xa;FK docid -&gt; doctor.docid&#xa;title&#xa;scheduledate&#xa;scheduletime&#xa;duration_minutes&#xa;end_time&#xa;nop" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=14;fontStyle=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="schedule">
+          <mxGeometry x="0" y="40" width="300" height="150" as="geometry" />
+        </mxCell>
+
+        <mxCell id="appointment" value="appointment" style="swimlane;html=1;rounded=0;horizontal=1;startSize=40;fillColor=#ffffff;strokeColor=#000000;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="760" y="680" width="320" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="appointment_attrs" value="PK appoid&#xa;FK pid -&gt; patient.pid&#xa;apponum&#xa;FK scheduleid -&gt; schedule.scheduleid&#xa;appodate&#xa;status&#xa;completed_at&#xa;FK completed_by -&gt; doctor.docid&#xa;checkup_result" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=14;fontStyle=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="appointment">
+          <mxGeometry x="0" y="40" width="320" height="180" as="geometry" />
+        </mxCell>
+
+        <mxCell id="doctor_documents" value="doctor_documents" style="swimlane;html=1;rounded=0;horizontal=1;startSize=40;fillColor=#ffffff;strokeColor=#000000;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="680" width="320" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="doctor_documents_attrs" value="PK doctor_document_id&#xa;FK docid -&gt; doctor.docid&#xa;document_category&#xa;original_name&#xa;file_path&#xa;uploaded_at" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=14;fontStyle=1;whiteSpace=wrap;overflow=fill;" vertex="1" parent="doctor_documents">
+          <mxGeometry x="0" y="40" width="320" height="150" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_doctor_specialty" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;endArrow=none;startArrow=none;" edge="1" parent="1" source="doctor" target="specialties">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_doctor_admin" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;endArrow=none;startArrow=none;" edge="1" parent="1" source="doctor" target="admin">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_schedule_doctor" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;endArrow=none;startArrow=none;" edge="1" parent="1" source="schedule" target="doctor">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_appointment_patient" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;endArrow=none;startArrow=none;" edge="1" parent="1" source="appointment" target="patient">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_appointment_schedule" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;endArrow=none;startArrow=none;" edge="1" parent="1" source="appointment" target="schedule">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_appointment_completed_by" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;endArrow=none;startArrow=none;" edge="1" parent="1" source="appointment" target="doctor">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_doctor_documents_doctor" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;endArrow=none;startArrow=none;" edge="1" parent="1" source="doctor_documents" target="doctor">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

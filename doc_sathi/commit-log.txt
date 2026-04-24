@@ -1,0 +1,2 @@
+Demo commit log for legitimate forward-only Git workflow tests.
+Append-only. Do not use this file to fabricate project history.

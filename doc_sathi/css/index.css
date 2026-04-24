@@ -1,0 +1,115 @@
+body{
+    background-image: url(../img/doctorspic.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+.full-height {
+    background: rgba(26, 26, 26, 0.548);
+    background-attachment: fixed;
+    max-height: 100vh;
+    height: 100vh;
+
+
+}
+table{
+    width: 100%;
+    padding-top: 5px;
+    
+}
+.heading-text{
+    color: white;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 63px;
+    margin-top: 15%;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.sub-text2{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 17px;
+    line-height: 27px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0;
+}
+
+
+.register-btn{
+    background-color: rgba(240, 248, 255, 0.589);
+    color: #345cc4;
+}
+
+
+.edoc-logo{
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    padding-left: 20px;
+    animation: transitionIn-Y-over 0.5s;
+}
+
+.edoc-logo-sub{
+    color: rgba(255, 255, 255, 0.733);
+    font-size: 12px;
+
+}
+
+
+.nav-item{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 98px;
+    min-height: 50px;
+    margin: 0;
+    border-radius: 7px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    animation: transitionIn-Y-over 0.5s;
+    transition: 0.2s ease;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+}
+
+.nav-item:hover{
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
+
+}
+
+.nav-login{
+    background: #35b5ed;
+}
+
+.nav-login:hover{
+    background: #20a9e5;
+}
+
+.nav-register{
+    background: #26ce62;
+}
+
+.nav-register:hover{
+    background: #1fbd57;
+}
+
+.footer-hashen{
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    font-size: 13px;
+    animation: transitionIn-Y-over 0.5s;
+}
